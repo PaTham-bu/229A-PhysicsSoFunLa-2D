@@ -45,4 +45,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinManager
   coins: 0
-  coinText: {fileID: 0}

@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 1121269906494691999}
   - component: {fileID: 6541500380056099539}
   - component: {fileID: 20194105518062491}
+  - component: {fileID: 406519805995867824}
   m_Layer: 5
   m_Name: CoinText
   m_TagString: Untagged
@@ -316,6 +317,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &406519805995867824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4606497071035586773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4179b57e30f1e4f4598079cb72dd9b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinUIBinder
+  coinText: {fileID: 20194105518062491}
 --- !u!1 &8589319538586343179
 GameObject:
   m_ObjectHideFlags: 0
