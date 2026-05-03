@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -62,5 +62,35 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("Speed", speed);
 
         anim.SetBool("IsJumping", !isGrounded);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // Check if player is above enemy
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                if (contact.normal.y > 0.5f)
+                {
+                    // Player hit enemy from top
+                    Destroy(collision.gameObject);
+
+                    // Bounce player
+                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, 10f);
+                    return;
+                }
+            }
+
+            // Otherwise → player dies
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Player Died");
+        // Example: restart level
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
