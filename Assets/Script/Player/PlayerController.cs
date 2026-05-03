@@ -93,4 +93,12 @@ public class PlayerController : MonoBehaviour
         // Example: restart level
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Trap"))
+        {
+            Die();
+        }
+    }
 }
