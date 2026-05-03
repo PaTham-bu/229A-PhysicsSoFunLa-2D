@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
-    private bool movingRight = true;
 
     private float flipCooldown = 0.2f;
     private float flipTimer = 0f;
@@ -31,7 +30,7 @@ public class Enemy : MonoBehaviour
 
     void Move()
     {
-        float direction = movingRight ? 1 : -1;
+        float direction = -transform.localScale.x; 
         rb.linearVelocity = new Vector2(direction * moveSpeed, rb.linearVelocity.y);
     }
 
@@ -56,7 +55,7 @@ public class Enemy : MonoBehaviour
     {
         if (flipTimer > 0) return;
 
-        if (collision.gameObject.CompareTag("Ground"))
+        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
         {
             Flip();
         }
@@ -64,14 +63,12 @@ public class Enemy : MonoBehaviour
 
     void Flip()
     {
-        movingRight = !movingRight;
-
         transform.localScale = new Vector3(
-            movingRight ? 1 : -1,
+            -transform.localScale.x,
             1,
             1
         );
 
-        flipTimer = flipCooldown; // prevent instant re-flip
+        flipTimer = flipCooldown;
     }
 }
