@@ -1,18 +1,19 @@
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+using TMPro;
 
 public class CoinManager : MonoBehaviour
 {
     public static CoinManager instance;
 
     public int coins = 0;
-    public Text coinText; // UI Text reference
+    private TMP_Text coinText;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -25,15 +26,22 @@ public class CoinManager : MonoBehaviour
         UpdateUI();
     }
 
+    // CALL THIS FROM UI SCRIPT
+    public void BindUI(TMP_Text uiText)
+    {
+        coinText = uiText;
+        UpdateUI();
+    }
+
     public void AddCoin(int amount)
     {
         coins += amount;
         UpdateUI();
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         if (coinText != null)
-            coinText.text = "Coins: " + coins;
+            coinText.text = coins.ToString();
     }
 }
