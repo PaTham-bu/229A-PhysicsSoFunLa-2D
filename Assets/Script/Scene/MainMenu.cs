@@ -8,6 +8,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1); // Load Level1
     }
 
+    public void OpenCredits()
+    {
+        SceneManager.LoadScene(4); // Credits scene
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit Game");
