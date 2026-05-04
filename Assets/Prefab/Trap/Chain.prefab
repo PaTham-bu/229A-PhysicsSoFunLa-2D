@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 1113433926554484260}
   - component: {fileID: 7719648549089483390}
   - component: {fileID: 7279483217562303793}
-  - component: {fileID: 4272779261902444443}
+  - component: {fileID: 5928924927965587929}
   m_Layer: 0
   m_Name: Mace-Chain
   m_TagString: Trap
@@ -585,19 +585,42 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -60
     m_UpperAngle: 60
---- !u!114 &4272779261902444443
-MonoBehaviour:
+--- !u!58 &5928924927965587929
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4118278981811849554}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de4126bb658ac504a9b7a48f31577e38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ChainSwingTorque
-  torqueForce: 50
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.023075156, y: -0.011308716}
+  m_Radius: 0.7943025
 --- !u!1 &4894828186940528951
 GameObject:
   m_ObjectHideFlags: 0
