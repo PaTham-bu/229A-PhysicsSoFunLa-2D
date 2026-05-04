@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -89,9 +90,14 @@ public class PlayerController : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Player Died");
-        // Example: restart level
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
+
+        // stop timer
+        if (GameTimer.instance != null)
+            GameTimer.instance.StopTimer();
+
+        // go to result scene
+        SceneManager.LoadScene(3); // your Result scene index
     }
 
     void OnTriggerEnter2D(Collider2D collision)

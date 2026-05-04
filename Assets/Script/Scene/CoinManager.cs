@@ -44,4 +44,10 @@ public class CoinManager : MonoBehaviour
         if (coinText != null)
             coinText.text = coins.ToString();
     }
+
+    public void ResetCoins()
+    {
+        coins = 0;
+        UpdateUI();
+    }
 }

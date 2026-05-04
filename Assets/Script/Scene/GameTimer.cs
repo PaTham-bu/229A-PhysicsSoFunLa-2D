@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameTimer : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameTimer : MonoBehaviour
 
     private float timeElapsed = 0f;
     private bool isRunning = true;
+
+
 
     void Awake()
     {
@@ -60,5 +63,21 @@ public class GameTimer : MonoBehaviour
         timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
 
         Debug.Log(timerText);
+    }
+
+    public void StopTimer()
+    {
+        isRunning = false;
+    }
+
+    public float GetTime()
+    {
+        return timeElapsed;
+    }
+
+    public void ResetTimer()
+    {
+        timeElapsed = 0f;
+        isRunning = true;
     }
 }
