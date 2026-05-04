@@ -1668,6 +1668,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1150088601}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1230746152 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3807745373559958387, guid: 0e6fa14a78ea19642825891ee6856be9, type: 3}
+  m_PrefabInstance: {fileID: 4334431222521085099}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb6db0d2b81826f40b0e5d263ccf77be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseManager
 --- !u!1 &1490608710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,10 +2659,18 @@ PrefabInstance:
     - target: {fileID: 2864472793907309844, guid: 95f03ba53f849c6438ad0c21757eb9cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1230746152}
+    - target: {fileID: 2864472793907309844, guid: 95f03ba53f849c6438ad0c21757eb9cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 6729402348505774363, guid: 95f03ba53f849c6438ad0c21757eb9cd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 1230746152}
+    - target: {fileID: 6729402348505774363, guid: 95f03ba53f849c6438ad0c21757eb9cd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8885062344726539925, guid: 95f03ba53f849c6438ad0c21757eb9cd, type: 3}
       propertyPath: m_Pivot.x

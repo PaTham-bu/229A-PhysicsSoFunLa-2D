@@ -43,7 +43,15 @@ public class PauseManager : MonoBehaviour
     public void LoadMenu()
     {
         Time.timeScale = 1f;
-        Invoke("GoToMenu", 0.2f);
+
+        // RESET EVERYTHING
+        if (GameTimer.instance != null)
+            GameTimer.instance.ResetTimer();
+
+        if (CoinManager.instance != null)
+            CoinManager.instance.ResetCoins();
+
+        SceneManager.LoadScene(0); // Main Menu
     }
 
     void GoToMenu()
