@@ -853,7 +853,7 @@ MonoBehaviour:
 
     [NATCHANONE THONGDEE]
 
-    Role: [e.g. Credit / UI Designer]
+    Role: [e.g. Credit / QA]
 
 
 
@@ -862,7 +862,7 @@ MonoBehaviour:
 
     [WASUTEP KHUNNUI]
 
-    Role: [e.g. Game Designer / QA]
+    Role: [e.g. Game Designer / Level Designer]
 
 
 
@@ -891,7 +891,7 @@ MonoBehaviour:
 
 
 
-    TOOLS
+    TOOLS/ASSETS
     USED
 
 
@@ -904,25 +904,32 @@ MonoBehaviour:
 
     SunoAI
 
+    BayatGames
+
+    Simple
+    2D Platformer BE2
+
 
 
     ---
 
 
 
-    MUSIC
-    & SOUND
+    MUSIC & SOUND
 
 
 
-    LofiMainMenu - SunoAI
+    MainMenu - SunoAI
 
-    MainGameBG - SunoAI
-
-    EndCreditBG
+    MainGame01
     - SunoAI
 
-    ResultMenuBG - SunoAI
+    MainGame02 - SunoAI
+
+    EndCreditBG - SunoAI
+
+    ResultMenuBG
+    - SunoAI
 
 
 
@@ -935,8 +942,7 @@ MonoBehaviour:
 
 
 
-    === THANK
-    YOU FOR PLAYING ===
+    === THANK YOU FOR PLAYING ===
 
 
 '
