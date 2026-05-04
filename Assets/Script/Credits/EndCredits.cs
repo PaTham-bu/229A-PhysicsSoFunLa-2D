@@ -28,13 +28,5 @@ public class EndCredits : MonoBehaviour
         }
     }
 
-    void ShowFinalTime()
-    {
-        EndCreditsManager manager = FindObjectOfType<EndCreditsManager>();
-
-        if (manager != null)
-        {
-            manager.ShowFinalTime();
-        }
-    }
+    
 }
